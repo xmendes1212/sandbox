@@ -27,4 +27,4 @@ st.write('You selected `%s`' % filename)
 #
 import pandas as pd
 
-print(pd.__version__)
+st.write(pd.__version__)
