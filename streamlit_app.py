@@ -22,3 +22,9 @@ def file_selector(folder_path='.'):
 
 filename = file_selector()
 st.write('You selected `%s`' % filename)
+
+
+#
+import pandas as pd
+
+print(pd.__version__)
