@@ -1,9 +1,9 @@
 import streamlit as st
-from os import listdir
+import os
 from os.path import isfile, join
 
 st.title(' ⏳ Sandbox')
 
-
-files_list = [f for f in listdir(mypath) if isfile(join(mypath, f))]
+file_path = os.getcwd()
+files_list = [f for f in os.listdir(mypath) if isfile(join(file_path, f))]
 st.write(files_list)
