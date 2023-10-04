@@ -4,6 +4,11 @@ from os.path import isfile, join
 
 st.title(' ⏳ Sandbox')
 
+st.subheader('os')
 file_path = os.getcwd()
 files_list = [f for f in os.listdir(file_path) if isfile(join(file_path, f))]
+st.code('''
+file_path = os.getcwd()
+files_list = [f for f in os.listdir(file_path) if isfile(join(file_path, f))]
+''')
 st.write(files_list)
