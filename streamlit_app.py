@@ -24,7 +24,8 @@ filename = file_selector()
 st.write('You selected `%s`' % filename)
 
 
-#
+# Pandas version
 import pandas as pd
 
+st.subheader('Pandas version')
 st.write(pd.__version__)
