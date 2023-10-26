@@ -29,3 +29,17 @@ import pandas as pd
 
 st.subheader('Pandas version')
 st.write(pd.__version__)
+
+# White space formatting
+st.subheader('White space formatting')
+st.text('''
+8  ♖ ♘ ♚ ♙ ♘
+7    ♚     ♙
+6      ♖
+5        ♙
+4          ♙
+3  ♘
+2        ♚
+1  ♖
+   a b c d e 
+''')
