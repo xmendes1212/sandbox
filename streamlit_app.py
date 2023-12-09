@@ -13,8 +13,7 @@ data = "data:image/png;base64," + encoded.decode("utf-8")
 
 
 def card1():
-    with placeholder1: 
-        card(
+    return card(
           title="Button 1",
           text="Some description",
           image=data,
@@ -22,8 +21,7 @@ def card1():
         )
 
 def card2():
-    with placeholder2: 
-        card(
+    return card(
           title="Button 2",
           text="Some description",
           image=data,
@@ -33,8 +31,6 @@ def card2():
 st.button('Button 1', on_click=card1)
 st.button('Button 2', on_click=card2)
 
-placeholder1 = st.empty()
-placeholder2 = st.empty()
 
 
 
