@@ -1,6 +1,4 @@
 import streamlit as st
-import os
-from os.path import isfile, join
 
 st.title(' ⏳ Sandbox')
 
