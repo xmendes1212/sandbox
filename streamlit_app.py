@@ -28,8 +28,9 @@ def card2():
           key='second'
         )
 
-st.button('Button 1', on_click=card1)
-st.button('Button 2', on_click=card2)
+with st.sidebar():
+    st.button('Button 1', on_click=card1)
+    st.button('Button 2', on_click=card2)
 
 
 
