@@ -10,11 +10,10 @@ with open('bg-img.png', "rb") as f:
 data = "data:image/png;base64," + encoded.decode("utf-8")
 
 
-placeholder1 = st.empty()
-placeholder2 = st.empty()
+
 
 def card1():
-    return card(
+    return with placeholder1: card(
       title="Button 1",
       text="Some description",
       image=data,
@@ -22,14 +21,16 @@ def card1():
     )
 
 def card2():
-    return card(
+    return with placeholder2: card(
       title="Button 2",
       text="Some description",
       image=data,
       key='second'
     )
 
-with placeholder1:
-    st.button('Button 1', on_click=card1)
-with placeholder2:
-    st.button('Button 2', on_click=card2)
+placeholder1 = st.empty()
+placeholder2 = st.empty()
+
+
+st.button('Button 1', on_click=card1)
+st.button('Button 2', on_click=card2)
