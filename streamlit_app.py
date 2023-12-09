@@ -30,9 +30,11 @@ def card2():
           key='second'
         )
 
+st.button('Button 1', on_click=card1)
+st.button('Button 2', on_click=card2)
+
 placeholder1 = st.empty()
 placeholder2 = st.empty()
 
 
-st.button('Button 1', on_click=card1)
-st.button('Button 2', on_click=card2)
+
