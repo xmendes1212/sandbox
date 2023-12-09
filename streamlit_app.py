@@ -32,5 +32,17 @@ st.button('Button 1', on_click=card1)
 st.button('Button 2', on_click=card2)
 
 
+###############
+
+if 'dummy_key' not in st.session_state:
+    st.session_state.dummy_key = FALSE
+
+def clicked_checkbox():
+    st.session_state.dummy_key = TRUE
+
+st.checkbox("dummy_name", on_click=clicked_checkbox)
+
+st.write(st.session_state.dummy_key)
+
 
 
