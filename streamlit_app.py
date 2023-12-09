@@ -1,4 +1,5 @@
 import streamlit as st
+import docx2txt
 
 st.title(' ⏳ Sandbox')
 
