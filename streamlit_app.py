@@ -40,7 +40,7 @@ if 'dummy_key' not in st.session_state:
 def clicked_checkbox():
     st.session_state.dummy_key = 1
 
-st.checkbox("dummy_name", on_click=clicked_checkbox)
+st.checkbox("dummy_name", on_change=clicked_checkbox)
 
 st.write(st.session_state.dummy_key)
 
