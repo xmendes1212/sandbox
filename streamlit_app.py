@@ -17,7 +17,7 @@ with open('bg-img.png', "rb") as f:
 data = "data:image/png;base64," + encoded.decode("utf-8")
 
 
-def card1:
+def card1():
     return card(
       title="Button 1",
       text="Some description",
@@ -25,7 +25,7 @@ def card1:
       key='first'
     )
 
-def card2:
+def card2():
     return card(
       title="Button 2",
       text="Some description",
