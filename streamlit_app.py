@@ -35,10 +35,10 @@ st.button('Button 2', on_click=card2)
 ###############
 
 if 'dummy_key' not in st.session_state:
-    st.session_state.dummy_key = False
+    st.session_state.dummy_key = 0
 
 def clicked_checkbox():
-    st.session_state.dummy_key = True
+    st.session_state.dummy_key = 1
 
 st.checkbox("dummy_name", on_click=clicked_checkbox)
 
