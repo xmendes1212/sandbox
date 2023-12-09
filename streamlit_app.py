@@ -17,18 +17,21 @@ with open('bg-img.png', "rb") as f:
 data = "data:image/png;base64," + encoded.decode("utf-8")
 
 
-hasClicked = card(
-  title="Button 1",
-  text="Some description",
-  image=data,
-  on_click=lambda: print('hi'),
-  key='first'
-)
+def card1:
+    return card(
+      title="Button 1",
+      text="Some description",
+      image=data,
+      key='first'
+    )
 
-hasClicked2 = card(
-  title="Button 2",
-  text="Some description",
-  image=data,
-  on_click=lambda: print('hi again'),
-  key='second'
-)
+def card2:
+    return card(
+      title="Button 2",
+      text="Some description",
+      image=data,
+      key='second'
+    )
+
+st.button('Button 1', on_click=card1)
+st.button('Button 2', on_click=card2)
