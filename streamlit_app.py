@@ -34,15 +34,20 @@ st.button('Button 2', on_click=card2)
 
 ###############
 
-if 'dummy_key' not in st.session_state:
-    st.session_state.dummy_key = 0
+# callback to update 'test' based on 'check'
+def flip():
+    if st.session_state["check"]:
+        st.session_state["test"] = True
+    else:
+        st.session_state["test"] = False
 
-def clicked_checkbox():
-    st.session_state.dummy_key = 1
+if "test" not in st.session_state:
+    st.session_state["test"] = True
 
-st.checkbox("dummy_name", on_change=clicked_checkbox)
+st.checkbox(
+    "Flip the switch", value=st.session_state["test"], key="check", on_change=flip
+)
 
-st.write(st.session_state.dummy_key)
-
+st.write(st.session_state["test"])
 
 
